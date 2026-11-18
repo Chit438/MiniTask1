@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    name: Build .NET 10 API
+    name: Build and Test .NET 10 API
     runs-on: ubuntu-latest
 
     steps:
@@ -28,3 +28,6 @@ jobs:
 
       - name: Build application
         run: dotnet build MiniTask.slnx --configuration Release --no-restore
+
+      - name: Run automated tests
+        run: dotnet test MiniTask.slnx --configuration Release --no-build
