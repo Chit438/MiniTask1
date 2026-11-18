@@ -24,7 +24,7 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore MiniTask.sln
+        run: dotnet restore MiniTask.slnx
 
       - name: Build application
-        run: dotnet build MiniTask.sln --configuration Release --no-restore
+        run: dotnet build MiniTask.slnx --configuration Release --no-restore
